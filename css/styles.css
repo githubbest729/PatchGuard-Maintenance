@@ -1,0 +1,16 @@
+*{box-sizing:border-box}body{margin:0;background:#0b1120;color:#e5e7eb;font:14px/1.45 system-ui,sans-serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;background:#111827;border-bottom:1px solid #1f2937;flex-wrap:wrap;gap:8px}
+h1{font:700 16px monospace;color:#06b6d4;margin:0}nav{display:flex;gap:4px;overflow-x:auto;padding:8px 12px;background:#0b1120;border-bottom:1px solid #1f2937}
+nav button{white-space:nowrap}main{padding:14px;max-width:1200px;margin:auto}
+button,select,input,textarea{background:#111827;color:#e5e7eb;border:1px solid #1f2937;border-radius:6px;padding:7px 10px;font:inherit}
+button{cursor:pointer}button:hover,nav button.on{border-color:#06b6d4;color:#06b6d4}button.p{background:#06b6d4;color:#0b1120;font-weight:700}button.d{color:#ef4444}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:12px 0}.card{background:#111827;border:1px solid #1f2937;border-radius:8px;padding:14px}
+.kpi b{display:block;font:700 28px monospace}.bar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:7px;border-bottom:1px solid #1f2937}th{color:#9ca3af;font-weight:600}.tw{overflow-x:auto}
+.b{padding:2px 8px;border-radius:99px;font:600 11px monospace;border:1px solid}.ok{color:#10b981}.wa{color:#f59e0b}.cr{color:#ef4444}.in{color:#06b6d4}
+.modal{position:fixed;inset:0;background:#000a;display:flex;align-items:center;justify-content:center;z-index:9;padding:12px}.modal form{background:#111827;border:1px solid #06b6d4;border-radius:8px;padding:16px;max-width:560px;width:100%;max-height:92vh;overflow:auto}
+label{display:block;margin:8px 0 2px;color:#9ca3af;font-size:12px}.modal input:not([type=checkbox]),.modal select,.modal textarea{width:100%}label.ck{display:flex;gap:8px;color:#e5e7eb;font-size:13px}
+.drop{border:2px dashed #06b6d4;padding:24px;text-align:center;border-radius:8px}.mono{font-family:monospace;word-break:break-all}
+#toast{position:fixed;bottom:16px;right:16px;background:#10b981;color:#0b1120;padding:10px 14px;border-radius:6px;display:none;z-index:99}
+#install{display:none}#report{display:none}
+@media print{body>*:not(#report){display:none!important}#report{display:block!important;background:#fff;color:#000;padding:20px;font-family:serif}#report table,#report th,#report td{border:1px solid #888;color:#000}}

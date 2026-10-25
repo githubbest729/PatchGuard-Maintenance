@@ -1,6 +1,6 @@
 const STORES={patch_schedules:['scheduledDate','status','cveSeverity','assetType','fiscalYear'],backup_verifications:['verifiedDate','artifactType','hashMatch','testRestoreStatus','fiscalYear'],stability_audits:['auditDate','overallHealth','frequency','fiscalYear'],system_assets:['siteName','category'],cold_archives:['fiscalYear']};
 const PG={db:null,
-open(){return new Promise((ok,no)=>{const r=indexedDB.open('PatchGuardDB',1);r.onupgradeneeded=()=>{for(const[s,ix]of Object.entries(STORES)){const o=r.result.createObjectStore(s,{keyPath:'id'});ix.forEach(i=>o.createIndex(i,i))}};r.onsuccess=()=>{PG.db=r.result;ok()};r.onerror=()=>no(r.error)})},
+open(){return new Promise((ok,no)=>{const r=indexedDB.open('PatchGuardDB',3);r.onupgradeneeded=()=>{for(const[s,ix]of Object.entries(STORES)){if(!r.result.objectStoreNames.contains(s)){const o=r.result.createObjectStore(s,{keyPath:'id'});ix.forEach(i=>o.createIndex(i,i))}}};r.onsuccess=()=>{PG.db=r.result;ok()};r.onerror=()=>no(r.error)})},
 tx(s,m,f){return new Promise((ok,no)=>{const t=PG.db.transaction(s,m),q=f(t.objectStore(s));t.oncomplete=()=>ok(q&&q.result);t.onerror=()=>no(t.error)})},
 all:s=>PG.tx(s,'readonly',o=>o.getAll()),put:(s,v)=>PG.tx(s,'readwrite',o=>o.put(v)),del:(s,i)=>PG.tx(s,'readwrite',o=>o.delete(i)),clear:s=>PG.tx(s,'readwrite',o=>o.clear()),
 uid:()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6),

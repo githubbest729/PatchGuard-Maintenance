@@ -35,3 +35,5 @@ body{background:#0b1120 radial-gradient(#1e293b55 1px,transparent 1px) 0 0/22px 
 @media(max-width:820px){body{overflow:auto}#shell{flex-direction:column;height:auto}#side{width:auto}#nav{display:flex;overflow:auto}#nav button{white-space:nowrap}}
 .ca{display:flex;flex-wrap:wrap;gap:6px;max-width:380px;white-space:normal}.ca .b{white-space:normal}
 *{scrollbar-width:thin;scrollbar-color:#334155 #0f172a}::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-track{background:#0f172a}::-webkit-scrollbar-thumb{background:#334155;border-radius:6px}::-webkit-scrollbar-corner{background:#0f172a}
+.tour-highlight-pulse{outline:2px solid #06b6d4;border-radius:10px;animation:pu 1s infinite}@keyframes pu{0%,100%{box-shadow:0 0 0 3px #06b6d455,0 0 18px #06b6d4}50%{box-shadow:0 0 0 9px #06b6d422,0 0 36px #06b6d4}}
+details{border-bottom:1px solid #1e293b;padding:8px 0}summary{cursor:pointer;color:#06b6d4}.mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-top:10px}.mini>div{border:1px solid #1e293b;border-radius:10px;padding:10px;background:#0f172a;font-size:12px}

@@ -1,5 +1,5 @@
 {
-  "id": "/",
+  "id": "./",
   "name": "PatchGuard Maintenance",
   "short_name": "PatchGuard",
   "description": "SCADA routine update scheduler & backup verifier - Al Gurg Automation and Controls",

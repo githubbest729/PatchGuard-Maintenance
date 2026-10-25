@@ -33,3 +33,5 @@ body{background:#0b1120 radial-gradient(#1e293b55 1px,transparent 1px) 0 0/22px 
 .topo{display:grid;gap:10px}.lay{cursor:pointer;padding:12px;border:1px solid #1e293b;border-left:4px solid #06b6d4;border-radius:10px;background:#0f172a}.lay.ok{border-left-color:#10b981}.lay.wa{border-left-color:#f59e0b}.lay.cr{border-left-color:#ef4444;animation:bl 2s infinite}.lay:hover{background:#16213a}@keyframes bl{50%{box-shadow:0 0 14px #ef444466}}
 .b.cr{animation:bl 2s infinite}.sm{padding:6px 10px;font-size:12px}
 @media(max-width:820px){body{overflow:auto}#shell{flex-direction:column;height:auto}#side{width:auto}#nav{display:flex;overflow:auto}#nav button{white-space:nowrap}}
+.ca{display:flex;flex-wrap:wrap;gap:6px;max-width:380px;white-space:normal}.ca .b{white-space:normal}
+*{scrollbar-width:thin;scrollbar-color:#334155 #0f172a}::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-track{background:#0f172a}::-webkit-scrollbar-thumb{background:#334155;border-radius:6px}::-webkit-scrollbar-corner{background:#0f172a}
